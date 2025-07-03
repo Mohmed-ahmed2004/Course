@@ -1,0 +1,113 @@
+body {
+  background-image: url(images/b3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+ .h {
+  text-align: center;
+  font-size: 180px;
+  color: transparent;
+  background-clip: text;
+  background-image: url(images/b3.jpg);
+  background-size: contain;
+}
+
+.parent {
+  width: 100%;
+  height: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  column-gap: 14px;
+}
+.pawn,
+.queen,
+.bishop,
+.rook,
+.kight,
+.king {
+  /* background-color: #ddd; */
+  width: calc(94% / 3);
+  font-weight: bold;
+  height: 250px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  transition-duration: 1s;
+  justify-content: start;
+}
+.pawn:hover,
+.queen:hover,
+.rook:hover,
+.king:hover,
+.kight:hover,
+.bishop:hover {
+  height: 400px;
+  border-bottom: 5px solid gold;
+}
+.pawn-image img,
+.queen-image img,
+.king-image img,
+.bishop-image img,
+.kight-image img,
+.rook-image img {
+  width: 60px;
+  filter: drop-shadow(5px 5px 10px black);
+  transition-duration: 0.25s;
+  transition-delay: 0.25s;
+}
+.pawn:hover .pawn-image img {
+  width: 200px;
+  margin-right: 10px;
+}
+.queen:hover .queen-image img {
+  width: 140px;
+  margin-right: 10px;
+}
+.rook:hover .rook-image img {
+  width: 140px;
+  margin-right: 10px;
+}
+.bishop:hover .bishop-image img {
+  width: 140px;
+  margin-right: 10px;
+}
+.kight:hover .kight-image img {
+  width: 140px;
+  margin-right: 10px;
+}
+.king:hover .king-image img {
+  width: 120px;
+  margin-right: 10px;
+}
+.pawn:hover .text,
+.queen:hover .text,
+.rook:hover .text,
+.bishop:hover .text,
+.kight:hover .text,
+.king:hover .text {
+  justify-self: start;
+}
+.explain {
+  display: none;
+  width: 200px;
+  text-transform: capitalize;
+}
+.pawn:hover .explain,
+.queen:hover .explain,
+.rook:hover .explain,
+.kight:hover .explain,
+.bishop:hover .explain,
+.king:hover .explain {
+  width: 200px;
+  display: contents;
+  font-size: 16px;
+}
